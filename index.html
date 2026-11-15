@@ -93,9 +93,9 @@ nav{display:flex;gap:30px;align-items:center}nav a{color:#fff;text-decoration:no
 label.f{display:block;font-size:.9rem;color:#bcc2cc;font-weight:500}
 .f select,.f input{width:100%;margin-top:6px;padding:13px;border-radius:3px;border:1px solid #4a74c0;background:#0a2d6e;color:#fff;font:1rem Barlow}
 .res{background:#fff;color:#000;padding:32px;border-top:4px solid var(--gold);align-self:start}
-.res .price{font:700 2.5rem "Barlow Condensed";color:var(--blue);line-height:1.1}
+.res .price{font:700 clamp(1.6rem,6vw,2.5rem) "Barlow Condensed";color:var(--blue);line-height:1.15;overflow-wrap:anywhere}
 .res small{color:var(--mute);display:block;margin:8px 0 18px}
-.draw{height:120px;margin:0 0 18px;border:5px solid #8d949e;background:linear-gradient(135deg,#d7e9ff,#fff);display:flex;align-items:center;justify-content:center;font:700 1.1rem "Barlow Condensed";color:#1f3b66;transition:all .25s}
+.draw{height:120px;margin:0 auto 18px;max-width:100%;border:5px solid #8d949e;background:linear-gradient(135deg,#d7e9ff,#fff);display:flex;align-items:center;justify-content:center;font:700 1.1rem "Barlow Condensed";color:#1f3b66;transition:all .25s}
 /* depoimentos */
 .tst{background:linear-gradient(160deg,#0a2d6e 0%,#0f3d91 58%,#1a4fa8 100%);color:#fff;position:relative;overflow:hidden}
 .tst::before{content:"";position:absolute;right:-140px;top:-140px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,#e9b82428,transparent 65%)}
@@ -121,7 +121,7 @@ label.f{display:block;font-size:.9rem;color:#bcc2cc;font-weight:500}
 .gcard{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#0f3d91;color:#fff;padding:24px 28px;text-decoration:none;border-left:4px solid var(--gold);box-shadow:0 30px 60px #0002}.gl{display:flex;gap:14px;align-items:center}.gl b{font:700 2.8rem "Barlow Condensed";color:var(--gold);line-height:1}.gl small{color:#c5d3ee}.gcard span{font-weight:600;border-bottom:1px solid var(--gold);padding-bottom:2px}.locphoto{position:relative;margin-top:18px;box-shadow:0 20px 40px #0002}.locphoto img{display:block;width:100%;aspect-ratio:16/8;object-fit:cover;object-position:50% 30%}
 .pin{position:absolute;left:18px;bottom:18px;right:18px;background:#0a2d6eee;color:#fff;padding:16px 18px;display:flex;gap:14px;align-items:center;border-left:4px solid var(--gold)}
 .pin svg{width:30px;height:30px;flex:none;fill:var(--gold)}.pin small{display:block;color:#b4bac4;line-height:1.35}
-footer{background:#0a2d6e;color:#c5d3ee;padding:40px 0;text-align:center;font-size:.9rem;border-top:1px solid #e9b82455}
+footer{background:#0a2d6e;color:#c5d3ee;padding:40px 0 100px;text-align:center;font-size:.9rem;border-top:1px solid #e9b82455}
 footer img{width:46px;height:46px;border-radius:50%;margin:0 auto 12px;display:block}
 /* chat */
 #chatBtn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:62px;height:62px;border-radius:50%;border:0;background:#25d366;cursor:pointer;z-index:40;box-shadow:0 10px 28px #0006;display:grid;place-items:center}
@@ -222,8 +222,8 @@ footer img{width:46px;height:46px;border-radius:50%;margin:0 auto 12px;display:b
 <section id="clientes" class="tst"><div class="wrap">
 <div class="tsthead"><div><div class="eyebrow">Clientes</div><h2 style="margin:0">O que dizem sobre a Pimenta</h2></div>
 <div class="rate"><b>5,0</b><div><div class="stars">★★★★★</div><small>Avaliação média<br>dos nossos clientes</small></div></div></div>
-<div class="tgrid"><div class="tc"><div class="stars">★★★★★</div><p>“Atendimento rápido, mediram tudo certinho e a instalação ficou impecável. A porta pivotante deu outro ar para a casa.”</p><div class="who"><div class="av">M</div><div><b>Mariana Souza</b><span>Paulo Afonso/BA</span></div><span class="tag">Residência</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“Fizeram a fachada e as vitrines da minha loja. O visual mudou completamente e as vendas subiram.”</p><div class="who"><div class="av">C</div><div><b>Carlos Andrade</b><span>Paulo Afonso/BA</span></div><span class="tag">Loja</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“Box de vidro com acabamento perfeito, entregue no dia combinado. Equipe educada, que deixa tudo limpo.”</p><div class="who"><div class="av">J</div><div><b>Josefa Lima</b><span>Paulo Afonso/BA</span></div><span class="tag">Box de banheiro</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“Contratamos para a obra inteira, com janelas e portas. Prazo cumprido, preço justo e zero retrabalho.”</p><div class="who"><div class="av">R</div><div><b>Rafael Medeiros</b><span>Paulo Afonso/BA</span></div><span class="tag">Construtor</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“O fechamento da sacada ficou lindo e ainda reduziu o barulho da rua. Valeu cada centavo.”</p><div class="who"><div class="av">P</div><div><b>Patrícia Alves</b><span>Paulo Afonso/BA</span></div><span class="tag">Sacada</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“O orçamento pelo WhatsApp foi simples e sem enrolação. Qualidade e garantia de verdade.”</p><div class="who"><div class="av">A</div><div><b>Antônio Barbosa</b><span>Paulo Afonso/BA</span></div><span class="tag">Clínica</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“O portão madeirado ficou idêntico ao projeto da arquiteta. Acabamento caprichado e entrega pontual.”</p><div class="who"><div class="av">F</div><div><b>Fernanda Costa</b><span>Paulo Afonso/BA</span></div><span class="tag">Portão madeirado</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“A parede de vidro de correr integrou a cozinha à varanda. Todo mundo elogia quando chega em casa.”</p><div class="who"><div class="av">M</div><div><b>Marcos Vinícius</b><span>Paulo Afonso/BA</span></div><span class="tag">Área gourmet</span></div></div><div class="tc"><div class="stars">★★★★★</div><p>“Escolhi a porta pivotante com fechadura digital e ficou a cara da minha casa. Atendimento excelente.”</p><div class="who"><div class="av">L</div><div><b>Luciana Torres</b><span>Paulo Afonso/BA</span></div><span class="tag">Porta pivotante</span></div></div></div>
-<div class="tmore"><a class="btn ghost" id="rev" target="_blank" rel="noopener" href="#">Ver avaliações no Google</a></div>
+<p class="lead" style="position:relative;margin-top:34px;color:#b4bfd2">Veja o que os clientes escrevem sobre a Pimenta direto no Google, com avaliações reais de quem já fechou obra com a gente.</p>
+<div class="tmore" style="text-align:left;margin-top:28px"><a class="btn ghost" id="rev" target="_blank" rel="noopener" href="#">Ver avaliações no Google</a></div>
 </div></section>
 
 <section id="local" class="loc"><div class="wrap locgrid">
@@ -274,8 +274,8 @@ const msg=t=>wa("Olá! Vi a obra "+t+" no site da Pimenta e quero falar com um e
 const btn=t=>'<figcaption><span>'+t+'</span><a class="mini" target="_blank" rel="noopener" href="'+msg(t)+'">Falar com especialista</a></figcaption>';
 ITEMS.forEach(([c,t,k,v],i)=>{const f=document.createElement("figure");f.className="item";f.dataset.c=c;
 if(v){f.innerHTML='<div class="vwrap"><video muted loop playsinline preload="metadata" poster="'+IMG["vp"+k.slice(1)]+'" src="'+IMG[k]+'"></video><button class="play" aria-label="Reproduzir vídeo">▶</button></div>'+btn(t);
-const w=f.querySelector(".vwrap"),vd=w.querySelector("video");w.onclick=()=>{if(vd.paused){vd.controls=true;vd.play();w.classList.add("on")}};vd.onpause=()=>{if(!vd.ended)return};}
-else{f.innerHTML='<img alt="'+t+'" loading="lazy" src="'+IMG["p"+k]+'">'+btn(t);f.querySelector("img").onclick=()=>openLb(i)}
+const w=f.querySelector(".vwrap"),vd=w.querySelector("video");w.onclick=()=>{if(vd.paused){vd.controls=true;vd.play();w.classList.add("on")}};vd.onplay=()=>{document.querySelectorAll(".vwrap video").forEach(o=>{if(o!==vd){o.pause();o.controls=false;o.parentElement.classList.remove("on")}})};vd.onended=()=>{vd.controls=false;w.classList.remove("on")};}
+else{f.innerHTML='<img alt="'+t+'" loading="lazy" tabindex="0" role="button" src="'+IMG["p"+k]+'">'+btn(t);const im=f.querySelector("img");im.onclick=()=>openLb(i);im.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLb(i)}}}
 gal.append(f)});
 $("filters").onclick=e=>{const f=e.target.dataset.f;if(!f)return;cur=f;[...$("filters").children].forEach(b=>b.classList.toggle("on",b===e.target));
 [...gal.children].forEach(s=>s.hidden=!(f==="all"||s.dataset.c===f))};
@@ -291,7 +291,7 @@ function calc(){const L=Math.max(30,+$("lg").value||0),A=Math.max(30,+$("al").va
 const area=Math.max(1,L*A/10000),base=area*PRICE[$("pr").value]*GLASS[$("vi").value]*COLOR[$("co").value]*Q;
 $("out").textContent=brl(base*.9)+" a "+brl(base*1.15);
 $("det").textContent=Q+" un. | "+(area*Q).toFixed(2).replace(".",",")+" m² no total";
-const d=$("draw"),r=Math.min(L/A,2.4);d.style.width=Math.min(100,r*60)+"%";d.style.height=Math.max(60,Math.min(150,150/Math.max(r,.6)))+"px";d.textContent=L+" × "+A+" cm";
+const d=$("draw"),r=Math.max(.4,Math.min(L/A,3)),mw=Math.max(80,d.parentElement.clientWidth-64);let h=120,w=h*r;if(w>mw){w=mw;h=w/r}if(w<80){w=80;h=w/r}d.style.width=Math.round(w)+"px";d.style.height=Math.round(Math.min(h,150))+"px";d.textContent=L+" × "+A+" cm";
 $("send").href=wa("Olá! Sou "+($("nm").value||"cliente do site")+". Fiz uma simulação: "+Q+"x "+$("pr").value+", "+L+"×"+A+" cm, alumínio "+$("co").value+", vidro "+$("vi").value+". Estimativa "+$("out").textContent+". Gostaria de confirmar o orçamento.")}
 ["nm","pr","co","vi","qt","lg","al"].forEach(i=>$(i).oninput=calc);calc();
 // chat
